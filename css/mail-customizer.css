@@ -1,0 +1,72 @@
+html ::-webkit-scrollbar {
+    width: 5px;
+    height: 2px
+}
+html ::-webkit-scrollbar-track {
+    opacity: 0.6;
+}
+html ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    opacity: 0.9;
+    background: #d7d7d7;
+    transition: background-color .2s linear, width .2s ease-in-out;
+    -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+}
+html ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+.flex-1-1-0{
+	flex: 1 1 0 !important;
+}
+.flex-basis-1{
+	flex-basis: 1!important;
+}
+.flex-basis-0{
+	flex-basis: 0!important;
+}
+.options{
+	background-color: #323639;
+	color: #ffffff;
+}
+.mail-preview{
+	background-color: #525659;
+	color: #ffffff;
+}
+.toggle-options span {
+    background-color: #323639;
+    height: 2px;
+    display: block;
+    width: 18px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+@media(max-width:767px){
+    .options, .toggle-options{
+        position: absolute;
+    }
+    .options{
+        left: -100%;
+        top: 0;
+        z-index: 9;
+        transition: left .5s;
+    }
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.2);
+        opacity: 0;
+    }
+    .show-options .overlay{
+        opacity: 1;
+        height: 100%;
+    }
+    .show-options .options{
+        left: 0;
+    }
+    .toggle-options{
+        left: 15px;
+        top: 15px;
+    }
+}
